@@ -40,10 +40,12 @@ Template.streamSubmit.events({
     var url = "../../../"+Meteor.user().username
     var stream_url = "rtmp://54.221.226.33/live/"+Meteor.user().stream_key;
 
+    var userName = (Meteor.user().username) ? Meteor.user().username : Meteor.user().profile.name;
+
     var stream = {
       title: $("#title").val(),
       desc: $("#desc").val(),
-      userName: Meteor.user().username,
+      userName: userName,
       url: url,
       tag: $("#tags").val(),
       thumbnail: "http://wbpreview.com/previews/WB06M01T2/img/gallery/gallery-img-1-4col.jpg",
@@ -57,14 +59,17 @@ Template.streamSubmit.events({
     Session.set('stream_id', stream._id);
     
     }else{
+
+    var userName = (Meteor.user().username) ? Meteor.user().username : Meteor.user().profile.name;
     
     var streamProperties = {
       title: $("#title").val(),
       desc: $("#desc").val(),
-      tags: $("#tags").val()
+      tags: $("#tags").val(),
+      userName: userName
       };
       
-      var stream_id = Streams.findOne({userName: Meteor.user().username})._id;
+      var stream_id = Streams.findOne({userName: userName})._id;
       
       
       Streams.update(stream_id , {$set: streamProperties}, function(error) {

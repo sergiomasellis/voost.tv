@@ -1,12 +1,16 @@
 <template name="streamItem">
+<div class="col-sm-4 col-md-8">
+	<input id="preview" type="hidden" value="{{stream_url}}" />
+	<div id="preview_stream"></div>
+</div>
 <div class="col-sm-4 col-md-3">
   <div class="thumbnail">
     <img src="{{thumbnail}}" class="">
     <div class="caption">
-      <h4><a href="{{pathFor 'streamPage'}}">{{title}}</a></h4>
-      <h6 class="text-muted">{{viewerCount}} viewers on {{userName}}</h6>
+      <h2><a href="{{pathFor 'streamPage' }}">{{title}}</a> | {{userName}}</h2>
+      <p>{{desc}}</p>
     </div>
   </div>
 </div>
-  {{setTitle title}}
+	{{setTitle title}}	
 </template>

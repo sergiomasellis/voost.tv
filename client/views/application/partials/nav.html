@@ -20,9 +20,10 @@
     </form>
     <ul class="nav navbar-nav navbar-right">
       <li class="active"><a href="{{pathFor 'streamsList'}}">Browse</a></li>
+      {{#if currentUser}}
       <li><a href="{{pathFor 'streamSubmit'}}">Dashboard</a></li>
+      {{/if}}
       {{loginButtons}}
-
     </ul>
   </div><!-- /.navbar-collapse -->
 </nav>
