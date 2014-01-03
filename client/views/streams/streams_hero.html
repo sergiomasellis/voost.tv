@@ -1,0 +1,26 @@
+<template name="streamsHero">
+{{#if streams}}
+<div class="well">
+	<div class="row">
+	<div class="col-md-7">
+		<div id='hero_stream'></div>
+		<input type="hidden" id="hero_stream_url" value="{{streams.heroStreamUrl}}" />
+    </div>
+    <div class="col-md-5">
+    	<h2>{{streams.userName}} - {{streams.title}}</h2>
+    	<p>
+    		<img src="{{streams.profileImg}}" class="img-circle">
+    		<small>{{streams.userName}} | <a href="#">{{streams.tag}}</a></small>
+    	</p>
+    	<p class="text-muted">
+    	{{streams.desc}}
+    	</p>
+    	<small><a href="#">Click here to watch and chat live!</a></small>
+    </div>
+    </div>
+</div>
+
+{{getStream}}
+
+{{/if}}
+</template>

@@ -1,0 +1,42 @@
+<template name="streamSubmit">
+	<div class="well"><h3>Stream Key: <code class="">{{stream_key}}</code></h3></div>
+	<div class="well">
+	<div class="row">
+	<div class="col-md-5">
+	<form action="" class="bs-example form-horizontal">
+		<fieldset>
+		<legend>Title this broadcast</legend>
+		<div class="form-group">
+        <label for="inputEmail" class="col-lg-2 control-label">Title</label>
+        <div class="col-lg-5">
+          <input type="text" id="title" name="title" class="form-control" placeholder="Broadcast Title" value="{{currentTitle}}" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputEmail" class="col-lg-2 control-label">Description</label>
+        <div class="col-lg-5">
+          	<textarea maxlength="140" id="desc" name="desc" class="form-control"  placeholder="Broadcast Description">{{currentDesc}}</textarea>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputEmail" class="col-lg-2 control-label">Description</label>
+        <div class="col-lg-5">
+          	<textarea maxlength="140" id="tags" name="tags" class="form-control"  placeholder="Broadcast Tags"> {{currentTags}}</textarea>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputEmail" class="col-lg-2 control-label"></label>
+        <div class="col-lg-5">
+          	<button class="btn btn-primary">update</button>
+        </div>
+      </div>
+		</fieldset>
+	</form>
+	</div>
+		<div class="col-md-7">
+			<input id="preview" type="hidden" value="{{stream_url}}" />
+			<div id="preview_stream"></div>
+		</div>
+	</div>
+	</div>
+</template>

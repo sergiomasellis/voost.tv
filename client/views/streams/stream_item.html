@@ -1,0 +1,12 @@
+<template name="streamItem">
+<div class="col-sm-4 col-md-3">
+  <div class="thumbnail">
+    <img src="{{thumbnail}}" class="">
+    <div class="caption">
+      <h4><a href="{{pathFor 'streamPage'}}">{{title}}</a></h4>
+      <h6 class="text-muted">{{viewerCount}} viewers on {{userName}}</h6>
+    </div>
+  </div>
+</div>
+  {{setTitle title}}
+</template>
