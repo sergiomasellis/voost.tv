@@ -1,9 +1,13 @@
 <template name="streamItem">
-<div class="col-sm-4 col-md-8">
-	<input id="preview" type="hidden" value="{{stream_url}}" />
-	<div id="preview_stream"></div>
+<div class="row">
+<div class="col-sm-9 col-md-9">
+  <video id="" class="video-js vjs-default-skin" controls
+  preload="auto" width="100%" height="328px" poster="/img/cover.png"
+  data-setup="{}">
+  <source src="{{heroStreamUrl}}" type='rtmp/mp4'>
+  </video>
 </div>
-<div class="col-sm-4 col-md-3">
+<div class="col-sm-3 col-md-3">
   <div class="thumbnail">
     <img src="{{thumbnail}}" class="">
     <div class="caption">
@@ -12,5 +16,14 @@
     </div>
   </div>
 </div>
-	{{setTitle title}}	
+</div>
+
+	{{setTitle title}}
+
+  <div class="row">
+    <div class="col-sm-12 col-md-12">
+      {{>chatworks}} 
+    </div>
+  </div>
+
 </template>

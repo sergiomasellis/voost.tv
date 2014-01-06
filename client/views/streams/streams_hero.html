@@ -3,8 +3,11 @@
 <div class="well">
 	<div class="row">
 	<div class="col-md-7">
-		<div id='hero_stream'></div>
-		<input type="hidden" id="hero_stream_url" value="{{streams.heroStreamUrl}}" />
+		<video id="" class="video-js vjs-default-skin" controls
+          preload="auto" width="100%" height="328px" poster="/img/cover.png"
+          data-setup="{}">
+          <source src="{{streams.heroStreamUrl}}" type='rtmp/mp4'>
+          </video>
     </div>
     <div class="col-md-5">
     	<h2>{{streams.userName}} - {{streams.title}}</h2>
@@ -15,12 +18,20 @@
     	<p class="text-muted">
     	{{streams.desc}}
     	</p>
-    	<small><a href="#">Click here to watch and chat live!</a></small>
+    	<small><a href="/streams/{{streams._id}}">Click here to watch and chat live!</a></small>
     </div>
     </div>
 </div>
 
 {{getStream}}
 
+{{else}}
+<div class="jumbotron">
+      <div class="container">
+        <h1>Hi there!</h1>
+        <h2>Welcome to Canvas.tv</h2>
+        <p>It seem's no one is currently Streaming why don't you give it a go and share it with friends. You can stream almost anything, from painting to programing let your creativity shine!</p>
+      </div>
+    </div>
 {{/if}}
 </template>

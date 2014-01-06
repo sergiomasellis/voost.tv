@@ -48,10 +48,14 @@ Template.streamSubmit.events({
       userName: userName,
       url: url,
       tag: $("#tags").val(),
-      thumbnail: "http://wbpreview.com/previews/WB06M01T2/img/gallery/gallery-img-1-4col.jpg",
+      thumbnail: "/img/avatar.png",
       profileImg: "https://lh6.googleusercontent.com/-3OS1jxu6R6s/AAAAAAAAAAI/AAAAAAAAAHk/wvK-kwYovCw/s46-c-k-no/photo.jpg",
       heroStreamUrl: stream_url
     }
+
+    ChatworksRooms.insert({
+      room: "canvasChat-" + Meteor.user().stream_key
+    });
 
     
     stream._id = Streams.insert(stream);
@@ -85,23 +89,3 @@ Template.streamSubmit.events({
     Router.go('streamPage', stream);
   }
 });
-
-
-Template.streamSubmit.rendered=function(){
-    var initializeOnlyOnce=_.once(function(){
-        var streamUrl = $("#preview").val();
-        jwplayer('preview_stream').setup({
-          width: "100%",
-          height: "360",
-          stretching: "fill",
-          primary: "flash",
-          autostart: "false",
-          sources:[{file: streamUrl}],
-          logo: {
-                  file: 'http://localhost:3000/img/logo.png',
-                  link: 'http://locahost:3000/'
-          }
-        });
-    });
-    initializeOnlyOnce();
-};

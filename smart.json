@@ -4,6 +4,8 @@
     "spin": {},
     "bootstrap-3": {},
     "accounts-ui-bootstrap-3": {},
-    "crypto-md5": {}
+    "crypto-md5": {},
+    "chatworks": {},
+    "profile": {}
   }
 }
