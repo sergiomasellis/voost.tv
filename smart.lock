@@ -17,11 +17,11 @@
       "crypto-md5": {
         "version": "3.1.2.2"
       },
-      "chatworks": {
-        "version": "1.1.0"
-      },
       "profile": {
         "version": "0.0.5"
+      },
+      "chatworks": {
+        "version": "1.1.0"
       }
     },
     "packages": {
@@ -50,15 +50,15 @@
         "tag": "v3.1.2.2",
         "commit": "75bbb3eeace302122d3554a6212a6fe92553fa18"
       },
-      "chatworks": {
-        "git": "https://github.com/Pent/chatworks.git",
-        "tag": "v1.1.0",
-        "commit": "47953dc2ca1087753943c63fb4d2d3ec59befcb2"
-      },
       "profile": {
         "git": "https://github.com/BeDifferential/meteor-profile.git",
         "tag": "v0.0.5",
         "commit": "997cb5e3834893b8ff5097f6c0d41317628b2c90"
+      },
+      "chatworks": {
+        "git": "https://github.com/Pent/chatworks.git",
+        "tag": "v1.1.0",
+        "commit": "47953dc2ca1087753943c63fb4d2d3ec59befcb2"
       },
       "crypto-base": {
         "git": "https://github.com/oortcloud/meteor-crypto-base.git",
