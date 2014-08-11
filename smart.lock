@@ -2,48 +2,28 @@
   "meteor": {},
   "dependencies": {
     "basePackages": {
-      "iron-router": {
-        "version": "0.6.1"
-      },
-      "spin": {
-        "version": "0.2.0"
-      },
-      "bootstrap-3": {
-        "version": "0.3.7"
-      },
-      "accounts-ui-bootstrap-3": {
-        "version": "0.2.4"
-      },
-      "crypto-md5": {
-        "version": "3.1.2.2"
-      },
-      "profile": {
-        "version": "0.0.5"
-      },
-      "chatworks": {
-        "version": "1.1.0"
-      }
+      "spin": {},
+      "bootstrap-3": {},
+      "accounts-ui-bootstrap-3": {},
+      "crypto-md5": {},
+      "profile": {},
+      "chatworks": {}
     },
     "packages": {
-      "iron-router": {
-        "git": "https://github.com/EventedMind/iron-router.git",
-        "tag": "v0.6.1",
-        "commit": "4e1ee0581d68bff422a915dacb0bd30eae10fe08"
-      },
       "spin": {
         "git": "https://github.com/SachaG/meteor-spin.git",
-        "tag": "v0.2.0",
-        "commit": "fd3a2871a69442848b4b4e74f5e1ae28fa4a95a4"
+        "tag": "v2.0.4",
+        "commit": "f7b1e12a7caff1283cdb3671a393c182d0ae9862"
       },
       "bootstrap-3": {
         "git": "https://github.com/mangasocial/meteor-bootstrap-3.git",
-        "tag": "v0.3.7",
-        "commit": "5dd0d142c870647b910be80bc777b96f0dd45e5e"
+        "tag": "v3.2.0-1",
+        "commit": "17a63902fc6cf1096c5289d963c66cf28b474727"
       },
       "accounts-ui-bootstrap-3": {
         "git": "https://github.com/mangasocial/meteor-accounts-ui-bootstrap-3.git",
-        "tag": "v0.2.4",
-        "commit": "cdbd20eb065310c0cc302bbd5f22e5b2121c769a"
+        "tag": "v0.3.4",
+        "commit": "9f006ee48d869877d90d54ac75b54550a587df8f"
       },
       "crypto-md5": {
         "git": "https://github.com/oortcloud/meteor-crypto-md5.git",
@@ -51,19 +31,44 @@
         "commit": "75bbb3eeace302122d3554a6212a6fe92553fa18"
       },
       "profile": {
-        "git": "https://github.com/BeDifferential/meteor-profile.git",
-        "tag": "v0.0.5",
-        "commit": "997cb5e3834893b8ff5097f6c0d41317628b2c90"
+        "git": "https://github.com/Differential/meteor-profile.git",
+        "tag": "v0.0.10",
+        "commit": "2540cdc76cf5c5fdf6ee0fd0cff1e37c4b1ba519"
       },
       "chatworks": {
         "git": "https://github.com/Pent/chatworks.git",
-        "tag": "v1.1.0",
-        "commit": "47953dc2ca1087753943c63fb4d2d3ec59befcb2"
+        "tag": "v1.7.0",
+        "commit": "a081d78cd9834bab9a7a1d6868dc7b88effc08cc"
       },
       "crypto-base": {
         "git": "https://github.com/oortcloud/meteor-crypto-base.git",
         "tag": "v3.1.2.1",
         "commit": "5df8d82a0595553415bbfae2930c6ecbeece5794"
+      },
+      "iron-router": {
+        "git": "https://github.com/EventedMind/iron-router.git",
+        "tag": "v0.8.2",
+        "commit": "05415a8891ea87a00fb1e2388585f2ca5a38e0da"
+      },
+      "iron-layout": {
+        "git": "https://github.com/EventedMind/iron-layout.git",
+        "tag": "v0.2.0",
+        "commit": "4a2d53e35ba036b0c189c7ceca34be494d4c6c97"
+      },
+      "blaze-layout": {
+        "git": "https://github.com/EventedMind/blaze-layout.git",
+        "tag": "v0.2.5",
+        "commit": "273e3ab7d005d91a1a59c71bd224533b4dae2fbd"
+      },
+      "iron-core": {
+        "git": "https://github.com/EventedMind/iron-core.git",
+        "tag": "v0.2.0",
+        "commit": "0e48b5dc50d03f01025b7b900fb5ce2f13d52cad"
+      },
+      "iron-dynamic-template": {
+        "git": "https://github.com/EventedMind/iron-dynamic-template.git",
+        "tag": "v0.2.1",
+        "commit": "4dd1185c4d9d616c9abdb3f33e4a7d5a88db7e18"
       }
     }
   }

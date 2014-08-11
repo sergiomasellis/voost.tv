@@ -5,8 +5,6 @@
 
 standard-app-packages
 insecure
-preserve-inputs
-iron-router
 spin
 bootstrap-3
 accounts-ui-bootstrap-3
@@ -15,3 +13,4 @@ crypto-base
 crypto-md5
 profile
 chatworks
+iron-router
