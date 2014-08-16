@@ -5,6 +5,7 @@
     "accounts-ui-bootstrap-3": {},
     "crypto-md5": {},
     "profile": {},
-    "chatworks": {}
+    "chatworks": {},
+    "accounts-entry": {}
   }
 }

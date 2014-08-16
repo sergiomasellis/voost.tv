@@ -1,4 +1,6 @@
 Meteor.autosubscribe(function () {
 	Meteor.subscribe('streams');
-    Meteor.subscribe("userData");
+	Meteor.subscribe("settings");
+  Meteor.subscribe("userData");
+
 });

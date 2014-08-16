@@ -3,7 +3,7 @@ Template.streamSubmit.helpers({
   	return Meteor.user().stream_key;
   },
   stream_url: function(){
-	return "rtmp://54.221.226.33/live/"+Meteor.user().stream_key;
+	return "rtmp://rtpm.voost.tv/live/"+Meteor.user().stream_key;
   },
   currentTitle: function(){
   	 if(Streams.find({userName: Meteor.user().username}).count() == 1){
@@ -32,13 +32,13 @@ Template.streamSubmit.helpers({
 Template.streamSubmit.events({
   'click button': function(e) {
     e.preventDefault();
-    
+
     if(Streams.find({userName: Meteor.user().username}).count() != 1){
-    
- 
-    
+
+
+
     var url = "../../../"+Meteor.user().username
-    var stream_url = "rtmp://54.221.226.33/live/"+Meteor.user().stream_key;
+    var stream_url = "rtmp://rtpm.voost.tv/live/"+Meteor.user().stream_key;
 
     var userName = (Meteor.user().username) ? Meteor.user().username : Meteor.user().profile.name;
 
@@ -57,25 +57,24 @@ Template.streamSubmit.events({
       room: "canvasChat-" + Meteor.user().stream_key
     });
 
-    
     stream._id = Streams.insert(stream);
-    
+
     Session.set('stream_id', stream._id);
-    
+
     }else{
 
     var userName = (Meteor.user().username) ? Meteor.user().username : Meteor.user().profile.name;
-    
+
     var streamProperties = {
       title: $("#title").val(),
       desc: $("#desc").val(),
       tags: $("#tags").val(),
       userName: userName
       };
-      
+
       var stream_id = Streams.findOne({userName: userName})._id;
-      
-      
+
+
       Streams.update(stream_id , {$set: streamProperties}, function(error) {
             if (error) {
               // display the error to the user
@@ -84,7 +83,7 @@ Template.streamSubmit.events({
               Router.go('streamPage', {_id: stream_id});
             }
           });
-    
+
     }
     Router.go('streamPage', stream);
   }

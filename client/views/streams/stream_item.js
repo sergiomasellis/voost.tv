@@ -1,6 +1,6 @@
 Template.streamItem.helpers({
   setTitle: function(param) {
-  	document.title = "Canvas.tv | "+param;
+  	document.title = "Voost.tv | "+param;
 	return;
   }
 });

@@ -1,6 +1,5 @@
 Template.home.helpers({
   setTitle: function() {
-  	document.title = "Canvas.tv | ";
-	return;
+  	return document.title = "Voost.tv | Creative Streaming |";
   }
 });
